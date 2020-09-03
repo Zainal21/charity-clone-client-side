@@ -1,4 +1,4 @@
-# movie-catalogue
+# charity-clone-client-side
 
 ## Project setup
 ```
