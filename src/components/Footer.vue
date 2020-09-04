@@ -9,7 +9,7 @@
               <div class="footer_widget">
                 <div class="footer_logo">
                   <a href="#">
-                    <img src="img/footer_logo.png" alt="">
+                   <img src="../assets/logo.png" alt="" width="40%">
                   </a>
                 </div>
                 <p class="address_text">Lorem ipsum dolor sit amet, <br> consectetur adipiscing elit, sed do <br>

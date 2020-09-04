@@ -38,7 +38,7 @@
                         <div class="col-xl-3 col-lg-3">
                             <div class="logo">
                                 <a href="index.html">
-                                    <img src="img/logo.png" alt="">
+                                    <img src="../assets/charity.png" alt="" width="80%">
                                 </a>
                             </div>
                         </div>
@@ -46,16 +46,11 @@
                             <div class="main-menu">
                                 <nav>
                                     <ul id="navigation">
-                                        <li><a href="index.html">home</a></li>
-                                        <li><a href="About.html">About</a></li>
-                                        <li><a href="contact.html">Contact</a></li>
+                                        <li><router-link to="/">Home</router-link></li>
+                                        <li> <router-link to="/about">About</router-link></li>
+                                        <li> <router-link to="/contact">Contact</router-link></li>
                                     </ul>
                                 </nav>
-                                <div class="Appointment">
-                                    <div class="book_btn d-none d-lg-block">
-                                        <a data-scroll-nav='1' href="#">Make a Donate</a>
-                                    </div>
-                                </div>
                             </div>
                         </div>
                         <div class="col-12">

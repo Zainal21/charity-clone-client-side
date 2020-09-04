@@ -1,3 +1,5 @@
+
+
 <template>
   <div>
      <div class="popular_causes_area section_padding">
@@ -14,14 +16,14 @@
                     <div class="causes_active owl-carousel">
                         <div class="single_cause">
                             <div class="thumb">
-                                <img src="img/causes/1.png" alt="">
+                                <img src="../assets/img/causes/1.png" alt="">
                             </div>
                             <div class="causes_content">
                                 <div class="custom_progress_bar">
                                     <div class="progress">
                                         <div class="progress-bar" role="progressbar" style="width: 30%;" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100">
                                             <span class="progres_count">
-                                                30%
+                                                20%
                                             </span>
                                         </div>
                                       </div>
@@ -34,12 +36,12 @@
                                 <p>The passage is attributed to an 
                                     unknown typesetter in the century 
                                     who is thought</p>
-                                <a class="read_more" href="cause_details.html">Read More</a>
+                                <a class="read_more" href="">Read More</a>
                             </div>
                         </div>
                         <div class="single_cause">
                             <div class="thumb">
-                                <img src="img/causes/2.png" alt="">
+                                <img src="../assets/img/causes/2.png" alt="">
                             </div>
                             <div class="causes_content">
                                 <div class="custom_progress_bar">
@@ -59,12 +61,12 @@
                                 <p>The passage is attributed to an 
                                     unknown typesetter in the century 
                                     who is thought</p>
-                                <a class="read_more" href="cause_details.html">Read More</a>
+                                <a class="read_more" href="">Read More</a>
                             </div>
                         </div>
                         <div class="single_cause">
                             <div class="thumb">
-                                <img src="img/causes/3.png" alt="">
+                                <img src="../assets/img/causes/3.png" alt="">
                             </div>
                             <div class="causes_content">
                                 <div class="custom_progress_bar">
@@ -84,12 +86,12 @@
                                 <p>The passage is attributed to an 
                                     unknown typesetter in the century 
                                     who is thought</p>
-                                <a class="read_more" href="cause_details.html">Read More</a>
+                                <a class="read_more" href="">Read More</a>
                             </div>
                         </div>
                         <div class="single_cause">
                             <div class="thumb">
-                                <img src="img/causes/1.png" alt="">
+                                <img src="../assets/img/causes/1.png" alt="">
                             </div>
                             <div class="causes_content">
                                 <div class="custom_progress_bar">
