@@ -12,11 +12,11 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-12">
-                    <div class="causes_active owl-carousel">
-                        <div class="single_cause">
+                <div class="col-lg-4" v-for="cause in causes" :key="cause.id">
+                    <div class="causes">
+                        <div class="single_cause"  >
                             <div class="thumb">
-                                <img src="../assets/img/causes/1.png" alt="">
+                                <img v-bind:src="cause.thumbnail" alt="">
                             </div>
                             <div class="causes_content">
                                 <div class="custom_progress_bar">
@@ -30,88 +30,11 @@
                                 </div>
                                 <div class="balance d-flex justify-content-between align-items-center">
                                     <span>Raised: $5000.00 </span>
-                                    <span>Goal: $9000.00 </span>
+                                    <span>Goal: {{cause.goal}} </span>
                                 </div>
-                                <h4>Help us to Send Food</h4>
-                                <p>The passage is attributed to an 
-                                    unknown typesetter in the century 
-                                    who is thought</p>
-                                <a class="read_more" href="">Read More</a>
-                            </div>
-                        </div>
-                        <div class="single_cause">
-                            <div class="thumb">
-                                <img src="../assets/img/causes/2.png" alt="">
-                            </div>
-                            <div class="causes_content">
-                                <div class="custom_progress_bar">
-                                    <div class="progress">
-                                        <div class="progress-bar" role="progressbar" style="width: 30%;" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100">
-                                            <span class="progres_count">
-                                                30%
-                                            </span>
-                                        </div>
-                                      </div>
-                                </div>
-                                <div class="balance d-flex justify-content-between align-items-center">
-                                    <span>Raised: $5000.00 </span>
-                                    <span>Goal: $9000.00 </span>
-                                </div>
-                                <h4>Clothes For Everyone</h4>
-                                <p>The passage is attributed to an 
-                                    unknown typesetter in the century 
-                                    who is thought</p>
-                                <a class="read_more" href="">Read More</a>
-                            </div>
-                        </div>
-                        <div class="single_cause">
-                            <div class="thumb">
-                                <img src="../assets/img/causes/3.png" alt="">
-                            </div>
-                            <div class="causes_content">
-                                <div class="custom_progress_bar">
-                                    <div class="progress">
-                                        <div class="progress-bar" role="progressbar" style="width: 30%;" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100">
-                                            <span class="progres_count">
-                                                30%
-                                            </span>
-                                        </div>
-                                      </div>
-                                </div>
-                                <div class="balance d-flex justify-content-between align-items-center">
-                                    <span>Raised: $5000.00 </span>
-                                    <span>Goal: $9000.00 </span>
-                                </div>
-                                <h4>Water For All Children</h4>
-                                <p>The passage is attributed to an 
-                                    unknown typesetter in the century 
-                                    who is thought</p>
-                                <a class="read_more" href="">Read More</a>
-                            </div>
-                        </div>
-                        <div class="single_cause">
-                            <div class="thumb">
-                                <img src="../assets/img/causes/1.png" alt="">
-                            </div>
-                            <div class="causes_content">
-                                <div class="custom_progress_bar">
-                                    <div class="progress">
-                                        <div class="progress-bar" role="progressbar" style="width: 30%;" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100">
-                                            <span class="progres_count">
-                                                30%
-                                            </span>
-                                        </div>
-                                      </div>
-                                </div>
-                                <div class="balance d-flex justify-content-between align-items-center">
-                                    <span>Raised: $5000.00 </span>
-                                    <span>Goal: $9000.00 </span>
-                                </div>
-                                <h4>Help us to Send Food</h4>
-                                <p>The passage is attributed to an 
-                                    unknown typesetter in the century 
-                                    who is thought</p>
-                                <a class="read_more" >Read More</a>
+                                <h4>{{cause.title}}</h4>
+                                <p>{{cause.description}}</p>
+                                <router-link :to="{name:'detail', params:{id:cause.id}}" class="read_more">Read More</router-link>
                             </div>
                         </div>
                     </div>
@@ -124,6 +47,21 @@
 
 <script>
 export default {
-  name:'Populer'
+  name:'Populer',
+  data:()=>{
+      return {
+          causes: []
+      }
+  },
+  mounted(){
+      fetch('http://localhost:8000/api/v1/cause')
+        .then(res => res.json())
+        .then(res => {
+            this.causes = res.data
+        })
+  },
+  computed: {
+
+  }
 }
 </script>

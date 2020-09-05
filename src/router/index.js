@@ -24,7 +24,7 @@ Vue.use(VueRouter)
     component: Contact
   },
   {
-    path: '/detail-cause',
+    path: '/detail-cause/:id',
     name: 'detail',
     component: Detail
   }
