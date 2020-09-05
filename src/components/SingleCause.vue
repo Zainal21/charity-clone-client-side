@@ -11,16 +11,16 @@
                         <div class="causes_content">
                             <div class="custom_progress_bar">
                                 <div class="progress">
-                                    <div class="progress-bar" role="progressbar" style="width: 30%;" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100">
+                                    <div class="progress-bar" role="progressbar" style="width: 100%;" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100">
                                         <span class="progres_count">
-                                            30%
+                                          {{persentage(cause.fund_raished, cause.goal)}}%
                                         </span>
                                     </div>
                                   </div>
                             </div>
                             <div class="balance d-flex justify-content-between align-items-center">
-                                <span>Raised: $5000.00 </span>
-                                <span>Goal:{{cause.goal}} </span>
+                                <span>Deficiency    : Rp. {{cause.fund_raished}} </span>
+                                <span>Goal      : Rp. {{cause.goal}} </span>
                             </div>
                             <h4>{{cause.title}}</h4>
                             <p>{{cause.description}}</p> 
@@ -48,8 +48,7 @@
                                     <div class="input-group-prepend">
                                         <span class="input-group-text" id="basic-addon1">Name</span>
                                     </div>
-                                    <input type="hidden" class="form-control" placeholder="40,200" aria-label="Username" aria-describedby="basic-addon1">
-                                    <input type="text" class="form-control" placeholder="40,200" aria-label="Username" aria-describedby="basic-addon1" v-model="name">
+                                    <input type="text" class="form-control" placeholder="Muhamad Zainal Arifin" aria-label="Username" aria-describedby="basic-addon1" v-model="name">
                                 </div>
                                 <div class="input-group mt-4">
                                     <div class="input-group-prepend">
@@ -83,6 +82,9 @@ export default {
       name: null,
       email:null,
       donation:null,
+      persentage(raised,target){
+        return Math.round(1/ (target/raised) * 100)
+      }
     }
   },
   mounted(){
@@ -122,6 +124,13 @@ export default {
           this.name= ''
           this.email= ''
           this.donation= ''
+      }).catch(err => {
+           swal({
+          title: "Terjadi Kesalahan!",
+          text: "Silahkan Coba Lagi" + err,
+          icon: "error",
+          button: "Ok!",
+        })
       })
     }
   }

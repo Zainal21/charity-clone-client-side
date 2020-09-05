@@ -21,15 +21,15 @@
                             <div class="causes_content">
                                 <div class="custom_progress_bar">
                                     <div class="progress">
-                                        <div class="progress-bar" role="progressbar" style="width: 30%;" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100">
+                                        <div class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100">
                                             <span class="progres_count">
-                                                20%
+                                                {{persentage(cause.fund_raished, cause.goal)}}%
                                             </span>
                                         </div>
                                       </div>
                                 </div>
                                 <div class="balance d-flex justify-content-between align-items-center">
-                                    <span>Raised: $5000.00 </span>
+                                    <span>Deficiency: {{cause.fund_raished}} </span>
                                     <span>Goal: {{cause.goal}} </span>
                                 </div>
                                 <h4>{{cause.title}}</h4>
@@ -50,7 +50,11 @@ export default {
   name:'Populer',
   data:()=>{
       return {
-          causes: []
+          causes: [],
+          persentage(raised,target){
+             return Math.round(1/ (target/raised) * 100)
+        }
+
       }
   },
   mounted(){

@@ -7,11 +7,10 @@
                     <div class="col-lg-9">
                         <div class="slider_text ">
                             <span>Get Started Today.</span>
-                            <h3> Help the children
-                                When They Need</h3>
-                            <p>With so much to consume and such little time, coming up <br>
-                                with relevant title ideas is essential</p>
-                            <a href="" class="boxed-btn3">Learn More
+                            <h3> Hunger is stalking the globe</h3>
+                            <p>Hundreds of thousands of children experiencing or witnessing assault
+and other gender-based violence.</p>
+                            <a href="#" class="boxed-btn3">Learn More
                             </a>
                         </div>
                     </div>
@@ -27,3 +26,4 @@ export default {
   name:'Slider'
 }
 </script>
+

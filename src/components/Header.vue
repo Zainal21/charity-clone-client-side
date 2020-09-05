@@ -8,8 +8,8 @@
                         <div class="col-xl-6 col-md-12 col-lg-8">
                             <div class="short_contact_list">
                                 <ul>
-                                    <li><a href="#"> <i class="fa fa-phone"></i> +1 (454) 556-5656</a></li>
-                                    <li><a href="#"> <i class="fa fa-envelope"></i>Yourmail@gmail.com</a></li>
+                                    <li><a href="#"> <i class="fa fa-phone"></i> +62 882 1675 6214</a></li>
+                                    <li><a href="#"> <i class="fa fa-envelope"></i>Zainalarifin080718@gmail.com</a></li>
                                 </ul>
                             </div>
                         </div>
