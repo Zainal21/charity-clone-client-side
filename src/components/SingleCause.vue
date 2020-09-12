@@ -96,7 +96,6 @@ export default {
       })
   },
   methods:{
-    
     addDonation(){
       //  let id = this.$route.params.id
       fetch(`http://localhost:8000/api/v1/donation`,{
